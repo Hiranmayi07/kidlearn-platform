@@ -9,6 +9,14 @@ pipeline {
             }
         }
 
+        stage('Debug') {
+            steps {
+                dir('server') {
+                    bat 'dir'
+                }
+            }
+        }
+
         stage('Install Backend Dependencies') {
             steps {
                 dir('server') {
